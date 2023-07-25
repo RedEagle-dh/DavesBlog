@@ -1,51 +1,16 @@
 [
   {
-    "id": 1,
-    "title": "EEE",
+    "title": "FB ist ein ganz lieber",
     "username": "Dave",
-    "date": "22.05.2023",
-    "text": "hahha"
+    "date": "2003-05-22",
+    "text": "Heinz nicht",
+    "id": 1
   },
   {
-    "id": 2,
-    "title": "Hello ",
-    "username": "Dave",
-    "date": "01.07.2023",
-    "text": "Hallo Welt"
-  },
-  {
-    "title": "Dritter Post",
-    "username": "Dalee",
-    "date": "05.07.2023",
-    "text": "Das ist ein Text",
-    "id": 3
-  },
-  {
-    "title": "",
-    "username": "",
-    "date": "",
-    "text": "",
-    "id": 4
-  },
-  {
-    "title": "Neuester Scheiß",
-    "username": "Dale",
-    "date": "2002-02-22",
-    "text": "Das ist der neueste Scheiß mit hoffentlich mehr als 50 Zeichen.",
-    "id": 5
-  },
-  {
-    "title": "Weltuntergang",
-    "username": "Dale",
-    "date": "3210-03-30",
-    "text": "Ich hätte mal voll Bock auf 'ne Apokalypse alter. So mit Zombies und Asteroiden und so.",
-    "id": 6
-  },
-  {
-    "title": "Freddy guckt zu",
-    "username": "Dave",
-    "date": "2023-07-22",
-    "text": "Hallo Schatzi :)",
-    "id": 7
+    "title": "hahah",
+    "username": "hahhah",
+    "date": "2222-02-22",
+    "text": "adsasdasd",
+    "id": 2
   }
 ]

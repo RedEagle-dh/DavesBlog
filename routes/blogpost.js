@@ -63,9 +63,12 @@ router.get("/newPost", (req, res, next) => {
 
 
 router.route("/")
-    .get(blogController.getAllPosts)
+    .get(blogController.createIndex)
     .post(blogController.createPost)
 
 router.route("/:id")
     .get(blogController.getPost)
+    
+
+
 module.exports = router;

@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var blogpostRouter = require('./routes/blogpost');
-var apiRouter = require('./routes/api');
+var apiRouter = require('./routes/api/api');
 
 var app = express();
 const fileUpload = require('express-fileupload');
