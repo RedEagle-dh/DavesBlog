@@ -66,11 +66,6 @@ router.route("/")
     .get(blogController.getAllPosts)
     .post(blogController.createPost)
 
-router.get("/:id", (req, res, next) => {
-    const func = blogController.getPost(req, res, next);
-    res.render("viewpost",
-        func
-    )
-})
-
+router.route("/:id")
+    .get(blogController.getPost)
 module.exports = router;

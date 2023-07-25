@@ -1,31 +1,37 @@
 const fs = require('fs');
+const fetch = require('node-fetch');
 
-const getModel = () => {
-    const blogpost = fs.readFileSync("./models/blogposts.json", "utf-8");
-    return JSON.parse(blogpost);
+
+const handleAPICall = async (url, method, body) => {
+    let response; 
+    if (body !== undefined) {
+        response = await fetch(url, {
+            method: method,
+            body: JSON.stringify(body),
+            header: { "Content-Type": "application/json" }
+        })
+    } else {
+        response = await fetch(url, {
+            method: method,
+            header: { "Content-Type": "application/json" } 
+        });
+    }
+
+    return response.json();
 }
 
-function getAllPosts(req, res, next) {
-    const blogpost = getModel();
+
+async function createIndex(req, res, next) {
+    const blogpost = await handleAPICall(`http://localhost/api/blog`, "GET");
     if (!blogpost) {
-        res.status(404).JSON({"error": "No Database Found"});
+        res.status(404).JSON({ "message": "No Database Found" });
     }
-    res.json(blogpost).status(200);
+    res.render("index", { posts: blogpost.data });
 }
 
-function getPost(req, res, next) {
-    const id = Number(req.params.id);
-    if (id <= 0) {
-        res.status(404).JSON({"error": "Invalid post ID"});
-    }
-    const blogpost = getModel();
-    if (!blogpost) {
-        res.status(404).JSON({"error": "No Database Found"});
-    }
-
-    const post = blogpost.find(p => p.id === id);
-    res.json(post).status(200);
-
+async function getPost(req, res, next) {
+    const result = await handleAPICall(`http://localhost/api/blog/${req.params.id}`, "GET");
+    res.render("viewpost", {post: result.data})
 }
 
 function createPost(req, res, next) {
@@ -40,4 +46,4 @@ function createPost(req, res, next) {
 }
 
 
-module.exports = { getAllPosts, getPost, createPost };
+module.exports = { createIndex, getPost, createPost };
