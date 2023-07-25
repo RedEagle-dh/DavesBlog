@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="container mt-4">
+      <h1 class="mb-4">Einzelner Blogeintrag</h1>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title"><%= title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= date %></h6>
+          <p class="card-text"><%= text %></p>
+        </div>
+      </div>
+
+      <a href="/" class="btn btn-primary">Zurück zur Startseite</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

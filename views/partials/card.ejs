@@ -1,0 +1,19 @@
+<div class="col-md-4">
+  <div class="card">
+    <img
+      src="https://via.placeholder.com/300"
+      class="card-img-top"
+      alt="Card Image"
+    />
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= post.date %></h6>
+      <p id="description" class="card-text">
+        <%= post.text.length >= 50 
+        ? post.text.substring(0, 50) + "..." 
+        : post.text %>
+      </p>
+      <a href="/blogpost/<%= post.id %>" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+</div>

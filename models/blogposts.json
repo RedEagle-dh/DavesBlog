@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "EEE",
+    "username": "Dave",
+    "date": "22.05.2023",
+    "text": "hahha"
+  },
+  {
+    "id": 2,
+    "title": "Hello ",
+    "username": "Dave",
+    "date": "01.07.2023",
+    "text": "Hallo Welt"
+  },
+  {
+    "title": "Dritter Post",
+    "username": "Dalee",
+    "date": "05.07.2023",
+    "text": "Das ist ein Text",
+    "id": 3
+  },
+  {
+    "title": "",
+    "username": "",
+    "date": "",
+    "text": "",
+    "id": 4
+  },
+  {
+    "title": "Neuester Scheiß",
+    "username": "Dale",
+    "date": "2002-02-22",
+    "text": "Das ist der neueste Scheiß mit hoffentlich mehr als 50 Zeichen.",
+    "id": 5
+  },
+  {
+    "title": "Weltuntergang",
+    "username": "Dale",
+    "date": "3210-03-30",
+    "text": "Ich hätte mal voll Bock auf 'ne Apokalypse alter. So mit Zombies und Asteroiden und so.",
+    "id": 6
+  }
+]
